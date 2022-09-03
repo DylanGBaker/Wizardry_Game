@@ -4,37 +4,37 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
-    [SerializeField] private Transform Player;
-    [SerializeField] private bool canMove;
-    [SerializeField] private float MoveSpeed;
-    [SerializeField] private Vector3 MoveDirection;
+    [SerializeField] private Rigidbody m_rigidBody;
+    [SerializeField] private Transform m_Player;
+    [SerializeField] private bool m_canMove;
+    [SerializeField] private float m_moveSpeed;
+    [SerializeField] private Vector3 m_moveDirection;
 
     private void Start()
     {
-        canMove = false;
+        m_canMove = false;
     }
 
     private void Update()
     {
-        Vector3 Direction = (Player.position - transform.position).normalized;
-        MoveDirection = Direction;
+        Vector3 Direction = (m_Player.position - transform.position).normalized;
+        m_moveDirection = Direction;
         LookAtPlayer();
     }
 
     void FixedUpdate()
     { 
-        if (canMove)
-            MoveTowardsPlayer(MoveDirection);
+        if (m_canMove)
+            MoveTowardsPlayer(m_moveDirection);
     }
 
     private void MoveTowardsPlayer(Vector3 movedirection)
     {
-        rb.velocity = new Vector3(movedirection.x, movedirection.y, movedirection.z) * MoveSpeed;
+        m_rigidBody.velocity = new Vector3(movedirection.x, movedirection.y, movedirection.z) * m_moveSpeed;
     }
 
     private void LookAtPlayer()
     {
-        transform.LookAt(Player);
+        transform.LookAt(m_Player);
     }
 }
