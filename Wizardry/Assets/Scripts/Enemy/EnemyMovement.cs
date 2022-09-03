@@ -19,11 +19,11 @@ public class EnemyMovement : MonoBehaviour
     {
         Vector3 Direction = (Player.position - transform.position).normalized;
         MoveDirection = Direction;
+        LookAtPlayer();
     }
 
     void FixedUpdate()
-    {
-        LookAtPlayer();
+    { 
         if (canMove)
             MoveTowardsPlayer(MoveDirection);
     }
