@@ -35,6 +35,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void LookAtPlayer()
     {
-        transform.LookAt(Player);
+        float ThetaAboutY = Mathf.Atan2(MoveDirection.z, MoveDirection.x);
+        //transform.LookAt(Player);
     }
 }
