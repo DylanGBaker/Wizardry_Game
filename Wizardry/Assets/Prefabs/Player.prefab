@@ -45,8 +45,6 @@ GameObject:
   - component: {fileID: 6359222072140340445}
   - component: {fileID: 6359222072140340446}
   - component: {fileID: 6359222072140340444}
-  - component: {fileID: 4750859795591790427}
-  - component: {fileID: 4450013413580272346}
   m_Layer: 0
   m_Name: PlayerObj
   m_TagString: Untagged
@@ -135,44 +133,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
---- !u!114 &4750859795591790427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359222072140340440}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e6bb8b78b710a41a75a57c85a905f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_playerMovementInput: {x: 0, y: 0}
-  m_playerMouseInput: {x: 0, y: 0}
-  m_rB: {fileID: 0}
-  m_Camera: {fileID: 6359222073178545866}
-  m_playerTransform: {fileID: 6359222072140340447}
-  m_jumpKey: 32
-  m_moveSpeed: 2
-  m_Sensitivity: 200
-  m_xRot: 0
-  m_yRot: 0
-  m_jumpSpeed: 10
-  m_verticalVelocity: 0
---- !u!136 &4450013413580272346
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6359222072140340440}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6359222073178545877
 GameObject:
   m_ObjectHideFlags: 0
