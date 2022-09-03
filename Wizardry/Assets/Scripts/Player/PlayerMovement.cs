@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer(Vector3 playermovementinput)
     {
-        rb.velocity = (transform.right * playermovementinput.x * m_MoveSpeed * Time.deltaTime) + (transform.forward * playermovementinput.z * m_MoveSpeed * Time.deltaTime); 
+        rb.velocity = ((transform.right * playermovementinput.x) + (transform.forward * playermovementinput.z)) * m_MoveSpeed * Time.deltaTime;
     }
 
     private void RotatePlayer(Vector2 playermouseinput)
