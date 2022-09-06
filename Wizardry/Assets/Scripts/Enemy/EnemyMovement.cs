@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
+    [SerializeField] private Vector3 m_moveDirection;
+
     [SerializeField] private Rigidbody m_rigidBody;
+
     [SerializeField] private Transform m_Player;
+
     [SerializeField] private bool m_canMove;
     [SerializeField] private float m_moveSpeed;
-    [SerializeField] private Vector3 m_moveDirection;
 
     private void Start()
     {
@@ -23,14 +26,14 @@ public class EnemyMovement : MonoBehaviour
     }
 
     void FixedUpdate()
-    { 
+    {
         if (m_canMove)
-            MoveTowardsPlayer(m_moveDirection);
+            MoveTowardsPlayer(m_moveDirection);       
     }
 
     private void MoveTowardsPlayer(Vector3 movedirection)
     {
-        m_rigidBody.velocity = new Vector3(movedirection.x, movedirection.y, movedirection.z) * m_moveSpeed;
+        m_rigidBody.velocity = new Vector3(movedirection.x, movedirection.y, movedirection.z) * m_moveSpeed;    
     }
 
     private void LookAtPlayer()

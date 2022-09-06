@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8167471668554154454}
   - component: {fileID: 8167471668554154455}
   - component: {fileID: 8167471668554154456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,6 @@ MonoBehaviour:
   m_playerMovementInput: {x: 0, y: 0}
   m_playerMouseInput: {x: 0, y: 0}
   m_gravitationalForce: {x: 0, y: 0, z: 0}
-  m_groundCheck: {fileID: 0}
   m_rigidBody: {fileID: 8167471668554154454}
   m_Camera: {fileID: 8167471668885223927}
   m_jumpKey: 32
@@ -155,7 +154,7 @@ GameObject:
   - component: {fileID: 8167471668885223929}
   - component: {fileID: 8167471668885223927}
   - component: {fileID: 8167471668885223928}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Eye Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -237,7 +236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8167471669405327514}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
