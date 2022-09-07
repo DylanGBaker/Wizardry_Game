@@ -10,23 +10,26 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private Transform m_Player;
 
+
     [SerializeField] private bool m_canMove;
     [SerializeField] private float m_moveSpeed;
 
     private void Start()
     {
-        m_canMove = false;
+        m_Player = GameObject.Find("Player Object").GetComponent<Transform>();
+        m_canMove = true;
     }
 
     private void Update()
     {
         Vector3 Direction = (m_Player.position - transform.position).normalized;
         m_moveDirection = Direction;
-        LookAtPlayer();
+        
     }
 
     void FixedUpdate()
     {
+        LookAtPlayer();
         if (m_canMove)
             MoveTowardsPlayer(m_moveDirection);       
     }
