@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 m_playerMouseInput;
     [SerializeField] private Vector3 m_gravitationalForce;
 
-    [SerializeField] private Transform m_Weapon;
+    //[SerializeField] private Transform m_Weapon;
 
     [SerializeField] private Rigidbody m_rigidBody;
 
@@ -38,15 +38,15 @@ public class PlayerMovement : MonoBehaviour
         m_playerMovementInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         m_playerMouseInput = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
         ModifiedGravity(m_gravitationalForce);
-        CameraFollow();
         RotatePlayer(m_playerMouseInput);
-        Jump();  
+        Jump();
+        CameraFollow();
     }
 
     private void FixedUpdate()
     {
         StandardGravity(m_gravitationalForce);
-        MovePlayer(m_playerMovementInput);   
+        MovePlayer(m_playerMovementInput);  
     }
 
     private void MovePlayer(Vector3 playermovementinput)
@@ -62,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
         m_yRot += playermouseinput.x * m_Sensitivity * Time.deltaTime;
         m_xRot = Mathf.Clamp(m_xRot, -90f, 90f);
         m_Camera.transform.rotation = Quaternion.Euler(m_xRot, m_yRot, 0f);
-        m_Weapon.transform.rotation = Quaternion.Euler(-90f + m_xRot, m_yRot, 0f);
+        //m_Weapon.transform.rotation = Quaternion.Euler(-90f + m_xRot, m_yRot, 0f);
         transform.rotation = Quaternion.Euler(0, m_yRot, 0);
     }
 
